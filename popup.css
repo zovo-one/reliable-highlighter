@@ -1,0 +1,101 @@
+/* popup.css — Reliable Highlighter popup overrides.
+   Extends styles/zovo-base.css with per-extension styling. */
+
+/* Hero clickability */
+#zovo-hero-click {
+  cursor: pointer;
+  border-radius: var(--zovo-radius-card);
+  transition: background var(--zovo-transition);
+}
+#zovo-hero-click:hover {
+  background: var(--zovo-primary-50);
+}
+#zovo-hero-click:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--zovo-bg), 0 0 0 4px var(--zovo-primary);
+}
+
+/* Empty state */
+.zovo-empty {
+  padding: var(--zovo-space-6) var(--zovo-space-5);
+}
+
+/* Color picker */
+.zovo-color-row {
+  display: flex;
+  gap: var(--zovo-space-2);
+  align-items: center;
+}
+
+.zovo-color-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--zovo-border);
+  cursor: pointer;
+  transition: border-color var(--zovo-transition), box-shadow var(--zovo-transition);
+  padding: 0;
+  position: relative;
+}
+.zovo-color-btn:hover:not(:disabled) {
+  border-color: var(--zovo-primary);
+}
+.zovo-color-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--zovo-bg), 0 0 0 4px var(--zovo-primary);
+}
+.zovo-color-btn--active {
+  border-color: var(--zovo-primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--zovo-primary) 30%, transparent);
+}
+
+/* Locked Pro colors */
+.zovo-color-btn--locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.zovo-color-btn--locked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231A1A2E'%3E%3Cpath fill-rule='evenodd' d='M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* Search row */
+.zovo-search-row {
+  display: flex;
+  align-items: center;
+  gap: var(--zovo-space-2);
+}
+.zovo-search-row .zovo-input {
+  flex: 1;
+}
+#zovo-search:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Empty state text */
+.zovo-empty__text {
+  font-size: var(--zovo-fs-body);
+  color: var(--zovo-text-secondary);
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Upgrade button — uses --zovo-on-pro (dark text on gold) for WCAG AA */
+.zovo-btn--pro {
+  color: var(--zovo-on-pro);
+}
+
+/* Mark row in popup */
+.zovo-row {
+  border-radius: var(--zovo-radius-btn);
+}

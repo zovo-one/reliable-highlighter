@@ -1,0 +1,148 @@
+/* pdfviewer.css — PDF.js viewer page overrides. */
+
+.rl-pdf-viewer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--zovo-space-5);
+}
+
+/* File picker state */
+.rl-pdf-picker {
+  text-align: center;
+  padding: var(--zovo-space-8) var(--zovo-space-5);
+}
+
+.rl-pdf-picker__art {
+  margin-bottom: var(--zovo-space-4);
+}
+
+.rl-pdf-picker__title {
+  font-size: var(--zovo-fs-heading);
+  font-weight: var(--zovo-fw-heading);
+  color: var(--zovo-text);
+  margin: 0 0 var(--zovo-space-2);
+}
+
+.rl-pdf-picker__desc {
+  font-size: var(--zovo-fs-body);
+  color: var(--zovo-text-secondary);
+  max-width: 420px;
+  margin: 0 auto var(--zovo-space-5);
+  line-height: 1.5;
+}
+
+.rl-pdf-picker__hint {
+  font-size: var(--zovo-fs-caption);
+  color: var(--zovo-text-secondary);
+  margin-top: var(--zovo-space-3);
+}
+
+/* Error message */
+.rl-pdf-error {
+  padding: var(--zovo-space-3) var(--zovo-space-4);
+  border: 1px solid var(--zovo-error);
+  border-left: 4px solid var(--zovo-error);
+  border-radius: var(--zovo-radius-btn);
+  background: color-mix(in srgb, var(--zovo-error) 6%, var(--zovo-bg));
+  color: var(--zovo-error);
+  font-weight: var(--zovo-fw-heading);
+  margin-bottom: var(--zovo-space-4);
+}
+
+/* PDF canvas */
+.rl-pdf-canvas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--zovo-space-2);
+}
+
+.rl-pdf-canvas-container canvas {
+  border: 1px solid var(--zovo-border);
+  box-shadow: var(--zovo-shadow);
+}
+
+/* Toolbar */
+.rl-pdf-tools {
+  position: sticky;
+  bottom: 0;
+  background: var(--zovo-bg);
+  padding: var(--zovo-space-4) 0;
+  border-top: 1px solid var(--zovo-border);
+  margin-top: var(--zovo-space-4);
+}
+
+.rl-pdf-toolbar {
+  display: flex;
+  gap: var(--zovo-space-6);
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.rl-pdf-toolbar__colors {
+  flex-shrink: 0;
+}
+
+.rl-pdf-marks {
+  flex: 1;
+  min-width: 0;
+  max-width: 340px;
+}
+
+.rl-pdf-marks__empty {
+  font-size: var(--zovo-fs-caption);
+  color: var(--zovo-text-secondary);
+  padding: var(--zovo-space-2) 0;
+}
+
+/* Color picker (shared) */
+.zovo-color-row {
+  display: flex;
+  gap: var(--zovo-space-2);
+  align-items: center;
+}
+
+.zovo-color-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--zovo-border);
+  cursor: pointer;
+  transition: border-color var(--zovo-transition), box-shadow var(--zovo-transition);
+  padding: 0;
+}
+
+.zovo-color-btn:hover:not(:disabled) {
+  border-color: var(--zovo-primary);
+}
+
+.zovo-color-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--zovo-bg), 0 0 0 4px var(--zovo-primary);
+}
+
+.zovo-color-btn--active {
+  border-color: var(--zovo-primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--zovo-primary) 30%, transparent);
+}
+
+/* Text layer */
+.rl-text-layer {
+  position: relative;
+  line-height: 1;
+}
+
+.rl-text-layer span {
+  cursor: text;
+}
+
+@media (max-width: 640px) {
+  .rl-pdf-toolbar {
+    flex-direction: column;
+    gap: var(--zovo-space-4);
+  }
+
+  .rl-pdf-marks {
+    max-width: 100%;
+  }
+}

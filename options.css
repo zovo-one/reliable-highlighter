@@ -1,0 +1,161 @@
+/* options.css — Reliable Highlighter full-page options overrides. */
+
+.zovo-options {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--zovo-space-6) var(--zovo-space-5);
+}
+
+.zovo-options-layout {
+  display: flex;
+  gap: var(--zovo-space-6);
+  align-items: flex-start;
+}
+
+.zovo-options-main {
+  flex: 1;
+  min-width: 0;
+}
+
+#zovo-sidebar-mount {
+  flex: none;
+}
+
+@media (max-width: 768px) {
+  .zovo-options-layout {
+    flex-direction: column;
+  }
+}
+
+.zovo-header--wide {
+  margin-bottom: var(--zovo-space-6);
+}
+
+.zovo-section {
+  margin-bottom: var(--zovo-space-7);
+}
+
+.zovo-section__title {
+  font-size: var(--zovo-fs-heading);
+  font-weight: var(--zovo-fw-heading);
+  color: var(--zovo-text);
+  margin-bottom: var(--zovo-space-3);
+}
+
+/* Filter row */
+.zovo-filter-row {
+  display: flex;
+  gap: var(--zovo-space-3);
+  margin-bottom: var(--zovo-space-4);
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.zovo-filter-group {
+  flex: 1;
+  min-width: 140px;
+}
+
+/* Cards */
+.zovo-card {
+  padding: var(--zovo-space-4) var(--zovo-space-5);
+  border: 1px solid var(--zovo-border);
+  border-radius: var(--zovo-radius-card);
+  margin-bottom: var(--zovo-space-3);
+  background: var(--zovo-surface);
+}
+
+.zovo-card--locked {
+  opacity: 0.92;
+}
+
+.zovo-card__desc {
+  font-size: var(--zovo-fs-caption);
+  color: var(--zovo-text-secondary);
+  margin: var(--zovo-space-1) 0 0;
+  line-height: 1.5;
+}
+
+/* Inline select */
+.zovo-input--inline {
+  width: auto;
+  min-width: 160px;
+}
+
+/* Toggle */
+.zovo-toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.zovo-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.zovo-toggle__slider {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--zovo-radius-pill);
+  background: var(--zovo-border);
+  transition: background var(--zovo-transition);
+  cursor: pointer;
+}
+
+.zovo-toggle__slider::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--zovo-bg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform var(--zovo-transition);
+}
+
+.zovo-toggle input:checked + .zovo-toggle__slider {
+  background: var(--zovo-primary);
+}
+
+.zovo-toggle input:checked + .zovo-toggle__slider::after {
+  transform: translateX(18px);
+}
+
+.zovo-toggle input:disabled + .zovo-toggle__slider {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.zovo-toggle input:focus-visible + .zovo-toggle__slider {
+  box-shadow: 0 0 0 2px var(--zovo-bg), 0 0 0 4px var(--zovo-primary);
+}
+
+/* Toggle row layout */
+.zovo-toggle-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--zovo-space-4);
+}
+
+.zovo-toggle-info {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Export row */
+.zovo-export-row {
+  display: flex;
+  gap: var(--zovo-space-2);
+}
+
+.zovo-export-row .zovo-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

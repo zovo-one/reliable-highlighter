@@ -1,0 +1,254 @@
+{
+  "extName": {
+    "message": "Reliable Highlighter — Pages web et PDF locaux, les surlignages restent",
+    "description": "Extension name shown in chrome://extensions and the Chrome Web Store."
+  },
+  "extDesc": {
+    "message": "Highlight text on any web page or PDF. Marks survive reloads and edits. 100% on-device.",
+    "description": "Short description shown under the extension name."
+  },
+  "contextMenuHighlight": {
+    "message": "Highlight selection",
+    "description": "Right-click menu item shown when text is selected."
+  },
+  "contextMenuOpenPdf": {
+    "message": "Open PDF in Reliable Highlighter",
+    "description": "Right-click menu item shown on PDF links."
+  },
+  "popupHeroEmpty": {
+    "message": "0 highlights",
+    "description": "Hero stat when no marks exist yet."
+  },
+  "popupHeroLabel": {
+    "message": "across 0 pages",
+    "description": "Hero caption showing page count."
+  },
+  "popupEmptyTitle": {
+    "message": "Your library is empty",
+    "description": "Empty state headline shown when the library has no highlights."
+  },
+  "popupEmptyState": {
+    "message": "Select any text on a page and click the icon. Your first highlight appears here.",
+    "description": "Empty-state guidance shown when the library is empty."
+  },
+  "popupThisPage": {
+    "message": "This page",
+    "description": "Section header for marks on the current URL."
+  },
+  "popupNoMarksHere": {
+    "message": "No highlights on this page yet.",
+    "description": "Shown when the current URL has no marks."
+  },
+  "popupColorPicker": {
+    "message": "Highlight color",
+    "description": "Label for the color picker row."
+  },
+  "popupSearchLabel": {
+    "message": "Search your highlight library",
+    "description": "Accessible label for the search input."
+  },
+  "popupSearchPlaceholder": {
+    "message": "Search your library…",
+    "description": "Search input placeholder (Pro feature)."
+  },
+  "popupRecentPages": {
+    "message": "Recent pages",
+    "description": "Section header for the recent pages list."
+  },
+  "popupCapNotice": {
+    "message": "You have placed $1 highlights on this page. The free limit is $2. Pro removes the cap.",
+    "description": "Shown when a free user hits the per-page mark cap. Uses positional $1/$2 args from getMessage()."
+  },
+  "popupUpgradeCta": {
+    "message": "Upgrade to Pro",
+    "description": "Gold upgrade button label in the popup."
+  },
+  "popupMaybeLater": {
+    "message": "Maybe later",
+    "description": "Dismiss button on the upgrade prompt."
+  },
+  "popupOpenPdf": {
+    "message": "Open PDF",
+    "description": "Button to open the PDF viewer."
+  },
+  "popupCannotHighlight": {
+    "message": "Cannot highlight on this page.",
+    "description": "Shown when injection fails (chrome://, extension pages)."
+  },
+  "optionsLibraryTitle": {
+    "message": "Your Library",
+    "description": "Section title for the library list on the options page."
+  },
+  "optionsFilterSite": {
+    "message": "Filter by site",
+    "description": "Label for the site filter input."
+  },
+  "optionsFilterSitePlaceholder": {
+    "message": "example.com",
+    "description": "Placeholder for the site filter input."
+  },
+  "optionsFilterColor": {
+    "message": "Color",
+    "description": "Label for the color filter dropdown."
+  },
+  "optionsFilterTag": {
+    "message": "Tag",
+    "description": "Label for the tag filter input (Pro)."
+  },
+  "optionsFilterTagPlaceholder": {
+    "message": "research",
+    "description": "Placeholder for the tag filter input."
+  },
+  "optionsSettingsTitle": {
+    "message": "Settings",
+    "description": "Section title for settings."
+  },
+  "optionsDefaultColor": {
+    "message": "Default highlight color",
+    "description": "Label for the default color picker."
+  },
+  "optionsTheme": {
+    "message": "Theme",
+    "description": "Label for the theme selector."
+  },
+  "optionsThemeSystem": {
+    "message": "System",
+    "description": "Theme option: follow system preference."
+  },
+  "optionsThemeLight": {
+    "message": "Light",
+    "description": "Theme option: force light."
+  },
+  "optionsThemeDark": {
+    "message": "Dark",
+    "description": "Theme option: force dark."
+  },
+  "optionsAutoRestore": {
+    "message": "Auto-restore highlights on every page load",
+    "description": "Toggle label for Pro auto-restore (requires host permission)."
+  },
+  "optionsAutoRestorePro": {
+    "message": "Highlights re-apply automatically on every page load. No click needed. Requires permission to access all sites (opt-in).",
+    "description": "Description of the auto-restore Pro feature."
+  },
+  "optionsExportTitle": {
+    "message": "Export Library",
+    "description": "Section title for the export section."
+  },
+  "optionsExportMd": {
+    "message": "Markdown",
+    "description": "Export to Markdown button label."
+  },
+  "optionsExportJson": {
+    "message": "JSON",
+    "description": "Export to JSON button label."
+  },
+  "optionsExportCsv": {
+    "message": "CSV",
+    "description": "Export to CSV button label."
+  },
+  "optionsEmptyLibrary": {
+    "message": "No highlights yet. Select text on a page and click the toolbar icon.",
+    "description": "Shown when the library is empty on the options page."
+  },
+  "optionsLibraryFull": {
+    "message": "Library is full (10 MB). Remove old marks or export and clear to continue.",
+    "description": "Shown when storage.local quota is exceeded."
+  },
+  "colorYellow": {
+    "message": "Yellow",
+    "description": "Highlight color name."
+  },
+  "colorPink": {
+    "message": "Pink",
+    "description": "Highlight color name."
+  },
+  "colorCyan": {
+    "message": "Cyan",
+    "description": "Highlight color name."
+  },
+  "colorAll": {
+    "message": "All colors",
+    "description": "Color filter dropdown option showing all colors."
+  },
+  "onboardingTitle": {
+    "message": "Highlight the web. Keep your marks. All on your device.",
+    "description": "Onboarding hero headline."
+  },
+  "onboardingBody": {
+    "message": "Select any text on a page, click the Reliable Highlighter icon, and a mark appears. Your highlights survive page reloads and edits. Nothing leaves your browser.",
+    "description": "Onboarding body copy."
+  },
+  "onboardingFeature1": {
+    "message": "Resilient marks that survive page edits",
+    "description": "Onboarding feature highlight 1."
+  },
+  "onboardingFeature2": {
+    "message": "100% on-device — no cloud, no account",
+    "description": "Onboarding feature highlight 2."
+  },
+  "onboardingFeature3": {
+    "message": "Highlight web pages and local PDFs",
+    "description": "Onboarding feature highlight 3."
+  },
+  "onboardingShortcutHint": {
+    "message": "to highlight your selection instantly",
+    "description": "Onboarding shortcut hint text following the kbd keys."
+  },
+  "onboardingGetStarted": {
+    "message": "Get started",
+    "description": "Onboarding finish button."
+  },
+  "pdfViewerTitle": {
+    "message": "Reliable Highlighter — PDF",
+    "description": "Title of the PDF viewer page."
+  },
+  "pdfViewerOpenFile": {
+    "message": "Open a PDF file",
+    "description": "Label for the file picker button."
+  },
+  "pdfViewerPickerTitle": {
+    "message": "Highlight any PDF",
+    "description": "Title shown on the PDF file picker empty state."
+  },
+  "pdfViewerPickerDesc": {
+    "message": "Open a local PDF file and highlight text directly in the viewer. Your marks are saved on your device.",
+    "description": "Description text on the PDF file picker empty state."
+  },
+  "pdfViewerPickerHint": {
+    "message": "Max 50 MB. Your file never leaves your browser.",
+    "description": "Hint text on the PDF file picker."
+  },
+  "pdfViewerMarksList": {
+    "message": "Highlights in this PDF",
+    "description": "Section header for the marks list in the PDF viewer."
+  },
+  "pdfViewerNoMarks": {
+    "message": "No highlights yet. Select text on the page above.",
+    "description": "Empty state text for the PDF marks list."
+  },
+  "pdfViewerTooLarge": {
+    "message": "This PDF is too large to highlight reliably (max 50 MB).",
+    "description": "Error shown for oversized PDFs."
+  },
+  "pdfViewerOpenError": {
+    "message": "Could not open this PDF. It may be encrypted or corrupted.",
+    "description": "Error shown when PDF.js fails to render."
+  },
+  "markNotFound": {
+    "message": "Not found on this version of the page",
+    "description": "Shown for marks that could not be re-anchored."
+  },
+  "footerPrivacy": {
+    "message": "Privacy",
+    "description": "Footer privacy policy link text."
+  },
+  "footerZovoLink": {
+    "message": "zovo.one",
+    "description": "Footer link text."
+  },
+  "footerUpgradeLink": {
+    "message": "More tools",
+    "description": "Footer upgrade link text."
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reliable Highlighter — PDF Viewer</title>
+  <link rel="stylesheet" href="styles/zovo-base.css" />
+  <link rel="stylesheet" href="pdfviewer.css" />
+</head>
+<body class="zovo">
+  <div class="zovo-root rl-pdf-viewer">
+    <!-- Header -->
+    <header class="zovo-header zovo-header--wide">
+      <img class="zovo-header__icon" src="icons/icon-48.png" alt="Reliable Highlighter icon" />
+      <span class="zovo-header__title" data-i18n="pdfViewerTitle">Reliable Highlighter — PDF</span>
+      <span class="zovo-badge zovo-badge--free" id="zovo-tier-badge" aria-label="Current tier">FREE</span>
+    </header>
+
+    <!-- File picker (shown when no PDF is loaded) -->
+    <div id="rl-pdf-picker" class="rl-pdf-picker">
+      <div class="rl-pdf-picker__art" aria-hidden="true">
+        <svg viewBox="0 0 80 80" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="16" y="10" width="48" height="60" rx="6" fill="var(--zovo-surface)" stroke="var(--zovo-primary)" stroke-width="2"/>
+          <path d="M28 26 L52 26 M28 36 L52 36 M28 46 L42 46" stroke="var(--zovo-primary)" stroke-width="2" stroke-linecap="round"/>
+          <rect x="38" y="50" width="24" height="8" rx="3" fill="var(--zovo-primary-50)"/>
+          <rect x="38" y="50" width="16" height="8" rx="3" fill="var(--zovo-primary)" opacity="0.6"/>
+        </svg>
+      </div>
+      <h2 class="rl-pdf-picker__title" data-i18n="pdfViewerPickerTitle">Highlight any PDF</h2>
+      <p class="rl-pdf-picker__desc" data-i18n="pdfViewerPickerDesc">Open a local PDF file and highlight text directly in the viewer. Your marks are saved on your device.</p>
+      <label class="zovo-btn zovo-btn--primary" for="rl-pdf-file">
+        <span data-i18n="pdfViewerOpenFile">Open a PDF file</span>
+        <input type="file" accept=".pdf,application/pdf" id="rl-pdf-file" hidden
+               aria-label="Select a PDF file to open" />
+      </label>
+      <p class="rl-pdf-picker__hint" data-i18n="pdfViewerPickerHint">Max 50 MB. Your file never leaves your browser.</p>
+    </div>
+
+    <!-- Error message (hidden by default) -->
+    <div id="rl-pdf-error" class="rl-pdf-error" style="display:none;" role="alert" aria-live="assertive"></div>
+
+    <!-- PDF rendering canvas (populated by PDF.js) -->
+    <div id="rl-pdf-canvas-container" class="rl-pdf-canvas-container" role="region" aria-label="PDF page rendering area"></div>
+
+    <!-- PDF tools: color picker + marks list (shown when PDF loaded) -->
+    <div id="rl-pdf-tools" class="rl-pdf-tools" style="display:none;">
+      <div class="rl-pdf-toolbar">
+        <!-- Color picker -->
+        <div class="rl-pdf-toolbar__colors">
+          <div class="zovo-eyebrow" data-i18n="popupColorPicker">Highlight color</div>
+          <div class="zovo-color-row" id="rl-pdf-color-picker" role="radiogroup" aria-label="PDF highlight color">
+            <button class="zovo-color-btn zovo-color-btn--active" data-color="yellow"
+                    role="radio" aria-checked="true" aria-label="Yellow"
+                    style="background:#FFEB3B;"></button>
+            <button class="zovo-color-btn" data-color="pink"
+                    role="radio" aria-checked="false" aria-label="Pink"
+                    style="background:#F48FB1;"></button>
+            <button class="zovo-color-btn" data-color="cyan"
+                    role="radio" aria-checked="false" aria-label="Cyan"
+                    style="background:#80DEEA;"></button>
+          </div>
+        </div>
+
+        <!-- Marks list for this PDF -->
+        <div class="rl-pdf-marks">
+          <div class="zovo-eyebrow" data-i18n="pdfViewerMarksList">Highlights in this PDF</div>
+          <div id="rl-pdf-marks-list" role="list" aria-label="PDF highlights list">
+            <p class="rl-pdf-marks__empty" data-i18n="pdfViewerNoMarks">No highlights yet. Select text on the page above.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- injected by webpack -->
+  <script type="module" src="pdfviewer.js"></script>
+</body>
+</html>
